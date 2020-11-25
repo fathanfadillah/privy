@@ -1,0 +1,354 @@
+/* Image Preview */
+.btn-tertiary {
+    display: block;
+    width: 100%;
+    height: calc(1.6em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #495057;
+    background-color: #f5f8fa;
+    background-clip: padding-box;
+    border: 1px solid #e1e8ee;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-tertiary:hover,
+.btn-tertiary:focus {
+    color: #888;
+    border-color: #9ad4f1;
+}
+
+.input-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.input-file + .js-labelFile {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.input-file1 {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.input-file1 + .js-labelFile1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.input-file2 {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.input-file2 + .js-labelFile2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.img-circular {
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 576px) {
+    #nav-link {
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    #nav-link:hover {
+        color: #d31919;
+    }
+
+    .hero {
+        height: 800px;
+    }
+
+    /*navbar rubah warna*/
+    .navbar-brand {
+        background: url(https://privy.id/v1/img/logo-privyid-white.png);
+        height: auto;
+        width: 50px;
+    }
+
+    .navbar-toggler {
+        color: white;
+    }
+}
+
+@media (max-width: 576px) {
+    /* nav{
+        background-color: black;
+    } */
+    #nav-link {
+        color: #333333;
+    }
+    #nav-link:hover {
+        color: #d31919;
+    }
+
+    .head-desc {
+        line-height: 0.5px;
+    }
+
+    .head-title {
+        line-height: 0.5px;
+    }
+}
+
+@media (max-width: 770px) {
+    #smartphone {
+        display: none;
+    }
+
+    .hero {
+        background: url(https://privy.id/images/landing/bg-landing.jpg);
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding: 220px 0 80px;
+        position: relative;
+        height: auto;
+    }
+
+    /*navbar transparant*/
+    .navd {
+        /* background: black; */
+        transition: 500ms ease;
+        background-color: #333333;
+    }
+
+    .navd.scrolled {
+        background-color: #fafafa;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+.head-desc {
+    font-family: "Lato", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #fafafa;
+}
+
+.head-title {
+    font-family: "Lato", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.content-head {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: #333333;
+    font-family: "Lato", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 550;
+    line-height: 1.7;
+    text-align: center !important;
+    text-rendering: optimizelegibility;
+}
+
+@media (max-width: 991px) {
+    .navd {
+        background-color: #333333;
+        transition: 500ms ease;
+    }
+}
+
+@media (max-width: 1024px) {
+    .space {
+        display: none;
+    }
+}
+
+/* background header */
+.hero {
+    background: url(https://privy.id/images/landing/bg-landing.jpg);
+    background-size: cover;
+    background-position: top center;
+    padding: 220px 0 80px;
+    height: 600px;
+    margin-top: -100px;
+}
+
+/* background header */
+
+#btn-link {
+    -webkit-font-smoothing: antialiased;
+    background-color: #dc3545;
+    border: 1px solid transparent;
+    border-color: #dc3545;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-rendering: optimizelegibility;
+    transition: background-color 0.15s ease-in-out 0s,
+        border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s,
+        -webkit-box-shadow 0.15s ease-in-out 0s;
+    user-select: none;
+    vertical-align: middle;
+}
+
+/*navbar transparant*/
+.navd {
+    /* background: black; */
+    transition: 500ms ease;
+    background-color: none;
+}
+
+.navd.scrolled {
+    background-color: #fafafa;
+    border-bottom: 1px solid rgb(234, 234, 234);
+    transition: 500ms ease;
+}
+
+.navd.scrolled {
+    background-color: #fafafa;
+    color: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+#nav-link {
+    color: white;
+}
+
+#nav-link.scrolled {
+    transition: 500ms ease;
+    color: #333333;
+}
+
+/*navbar rubah warna*/
+
+#nav-link:hover {
+    transition: linear 0.5s;
+    color: #d31919;
+}
+
+.content-description {
+    line-height: 1.7;
+    /* font-size: 1.1rem; */
+    color: #333333;
+}
+
+footer {
+    background: url(https://privy.id/images/landing/bg-landing.jpg);
+}
+
+a {
+    text-decoration: none;
+    color: #fafafa;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fafafa;
+}
+
+i {
+    font-size: inherit;
+}
+
+.navbar-brand {
+    background-image: url(https://privy.id/v1/img/logo-privyid-white.png);
+    background-size: 150px;
+    height: 38px;
+    width: 150px;
+    /* border: 2px solid; */
+}
+
+.navbar-brand.scrolled {
+    background-image: url(https://privy.id/assets.1.7.2/img/logo-privy-colored.png);
+    background-size: 150px;
+    height: 38px;
+    width: 150px;
+    transition: 500ms ease;
+    /* border: 2px solid; */
+}
+
+/* home */
+/* keuntungan */
+.keuntungan {
+    font-size: large;
+}
+/* keuntungan */
+
+/* enterprise */
+.enterprise {
+    background: #fcf4f4;
+    color: #333333;
+    font-size: large;
+}
+
+.enterprise-description {
+    line-height: 1.7;
+}
+/* enterprise */
+
+/* liput */
+/* home */
+
+/* dokuemtasiAPI */
+#dokumentasi {
+    font-size: large;
+}
+#dokumentasi-title {
+    color: #333333;
+}
+#dokumentasi-description {
+    color: #cfcfcf;
+}
+#dokumentasi {
+}
+
+#dokumentasi-image {
+    transition: 0.5s;
+}
+
+#dokumentasi-image:hover {
+    animation: icon;
+    margin-top: 10px;
+}
+@keyframes icon {
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+/* nav */
+/* nav */
+/* dokumentasi */
+li {
+    line-height: 1.7;
+}
