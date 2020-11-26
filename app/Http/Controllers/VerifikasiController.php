@@ -24,7 +24,9 @@ class VerifikasiController extends Controller
         $file     = $request->file('file');
         $fileName = time() . "." . $file->getClientOriginalName();  
         // $request->file('file')->move("files/privy/", $fileName);
+        var_dump($fileName);
         $request->file('file')->storeAs('/files/', $fileName, 'sftp', 'public');
+
 
         $verifikasis = new Verifikasi();
         // $pedagang->nm_pedagang     = $request->nm_pedagang;
