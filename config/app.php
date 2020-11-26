@@ -12,6 +12,7 @@ return [
     | any other location as required by the application or its packages.
     |
     */
+   
 
     'name' => env('APP_NAME', 'Laravel'),
 
@@ -122,6 +123,9 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
+
+    'sftp_root' => env('SFTP_ROOT'),
+    'sftp_src' => env('SFTP_SRC'),
 
     /*
     |--------------------------------------------------------------------------
