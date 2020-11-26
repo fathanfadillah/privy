@@ -20,8 +20,8 @@ Route::get('/tentangkami',   'PrivyController@tentangKami')->name('tentangkami')
 
 Route::get('/dokumentasiapi', 'PrivyController@dokumentasiAPI')->name('dokumentasiapi');
 
+Route::post('/verifikasipdf/store', 'VerifikasiController@store')->name('verifikasipdf.store');
 Route::get('/verifikasipdf', 'VerifikasiController@index')->name('verifikasipdf');
-Route::post('/verifikasipdf/store', 'VerifikasiController@store');
 
 Route::get('/kontakbisnis', 'KontakController@index')->name('kontakbisnis');
 Route::post('/kontakbisnis', 'KontakController@store');

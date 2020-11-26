@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <h3 class="text-center py-4">Digital Signature Verification
                         </h3>
-                        <form action="/verifikasiPDF" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('verifikasipdf.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @error('file')
                                 <div class="alert alert-danger">
