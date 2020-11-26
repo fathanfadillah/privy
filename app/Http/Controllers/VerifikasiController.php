@@ -37,6 +37,6 @@ class VerifikasiController extends Controller
 
         $fileStatus = $file->getClientOriginalName();
 
-        return redirect('.privy.verifikasipdf')->with('status', $fileStatus.' Telah Tersimpan');
+        return redirect('pages.verifikasi.verifikasiPDF')->with('status', $fileStatus.' Telah Tersimpan');
     }
 }
