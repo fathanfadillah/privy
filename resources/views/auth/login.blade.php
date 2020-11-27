@@ -188,7 +188,7 @@
                 {{-- <div class="card-header">{{ __('Login') }}</div> --}}
 
                 <div class="card-body">
-                    <img class="icon" src="{{asset('../images/privy.svg')}}" alt="" height="95" width="95">
+                    <img class="icon" src="{{asset('../images/privy_icon.png')}}" alt="" height="95" width="95">
                 <h3 class="title font-weight-bold">Log In</h3>
                 <h4 class="subtitle">with your PrivyID Account</h4>
                     <form method="POST" action="{{ route('login') }}">
