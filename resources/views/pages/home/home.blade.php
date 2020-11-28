@@ -96,8 +96,8 @@
                             @foreach($keuntungans as $k)
                             <div class="col-sm-4 mr-auto p-3">
                                 <div class="row">
-                                    <div class="col-sm-1 border border-danger">
-                                        <img src="{{ asset('../images/privy/$k->icon') }}" alt="" width="200" class="">
+                                    <div class="col-sm-1">
+                                        <img src="{{$src.$k->icon}}" alt="" width="200" class="">
                                     </div>
                                     <div class="col-md-6">
                                         <h4 class="content-title font-weight-bold">{{$k->title_keuntungan}}</h4>
@@ -146,7 +146,7 @@
                 <div class="row my-4 py-4 ">
                     @endif
                     <!-- <div id="enterprise-content" class="row my-4 text-left"> -->
-                    <div class="col-md-5 border border-danger mx-auto"><img src="{{url('../images/$es->foto')}}" alt=""
+                    <div class="col-md-5 mx-auto"><img src="{{$src.$es->foto}}" alt=""
                             heigth="650" width="400">
                     </div>
                     <div class="col-md-3 text-left mx-auto">
@@ -186,7 +186,7 @@
                     <div class="row mx-auto">
                         @foreach($liputans as $l)
                         <div class="col-md-3 mx-auto my-5">
-                            <img id="liputans" src="{{ asset('../images/404.png') }}" alt="" class="h-50 w-50">
+                            <img id="liputans" src="{{ $src.$l->foto }}" alt="" class="h-50 w-50">
                         </div>
                         @endforeach
                     </div>
@@ -199,7 +199,9 @@
                 <div>
                     <h2 class="font-weight-bold mb-5">Certifications</h2>
                     <div class="row">
-                        <img src="{{asset('../images/awards.png')}}" alt="" class="mx-auto">
+                        @foreach ($sertifikats as $ser)
+                            <img src="{{$src.$ser->foto}}" alt="" class="mx-auto">    
+                        @endforeach
                     </div>
                 </div>
             </div>

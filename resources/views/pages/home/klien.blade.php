@@ -13,8 +13,8 @@
 <div class="owl-carousel my-5 py-3">
     <!-- <div class="col-md-6"> -->
     @foreach($kliens as $k)
-    <div class="h-50 w-50"><img src="{{url('../images/404.png')}}" alt="">
-    </div>
+        <div class="h-50 w-50"><img src="{{$src.$k->foto}}" alt="">
+        </div>
     @endforeach
     <!-- </div> -->
     <!-- <div class="row mx-auto"> -->

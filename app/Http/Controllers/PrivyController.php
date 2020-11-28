@@ -6,33 +6,42 @@ use App\Keuntungan;
 use App\Enterprise;
 use App\Klien;
 use App\Liputan;
+use App\Sertifikat;
 
 use App\Pimpinan;
 use App\Penghargaan;
 
 use App\Dokumentasi;
-
 use App\Faq;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
 class PrivyController extends Controller
 {
-    //
+    protected $path = '/images/';
+    
     public function index()
     {
             //  $keuntungans = DB::select('select * from keuntungans ORDER BY updated_at DESC');
              $keuntungans = Keuntungan::all();
+
+            //  $icons = $keuntungans->icon;
+            //  $keuntungans->icon = config('app.sftp_src').'/images/' . $icons;
             //  $enterprises = DB::select('select * from enterprises');
             $enterprises = Enterprise::all();
             //  $kliens = DB::select('select * from kliens');
             $kliens = Klien::all();
             //  $liputans = DB::select('select * from liputans');
             $liputans = Liputan::all();
+            $sertifikats = Sertifikat::all();
+
+
+            $src = config('app.sftp_src'). $this->path;
              
-        return view('pages.home.home',compact('keuntungans','enterprises','kliens','liputans'));
+        return view('pages.home.home',compact('src','keuntungans','enterprises','kliens','liputans','sertifikats'));
     }
 
     public function tentangKami()
