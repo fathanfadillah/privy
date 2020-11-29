@@ -44,6 +44,52 @@
         box-shadow: rgba(225, 83, 97, 0.5) 0px 0px 0px 0.2rem;
     }
 
+    .register {
+        -webkit-font-smoothing: antialiased;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-color: #dc3545;
+        border-radius: 2rem;
+        box-shadow: rgb(228, 46, 44) 0px 8px 13px -8px;
+        box-sizing: border-box;
+        color: rgb(220, 53, 69);
+        display: inline-block;
+        font-family: "Red Hat Text", sans-serif !important;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.03rem;
+        line-height: 1.5;
+        margin-top: 0.25rem !important;
+        padding: 0.6rem 2rem;
+        text-align: center;
+        text-rendering: optimizelegibility;
+        text-transform: uppercase !important;
+        transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+        user-select: none;
+        vertical-align: middle;
+    }
+
+    .login:hover {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    .login:active {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        box-shadow: rgba(220, 53, 69, 0.5) 0px 0px 0px 0.2rem;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .login:focus {
+        box-shadow: rgba(220, 53, 69, 0.5) 0px 0px 0px 0.2rem;
+        color: rgb(167, 29, 42) !important;
+        text-decoration: none;
+    }
+
     .input {
         -webkit-font-smoothing: antialiased;
         background-clip: padding-box;
@@ -103,7 +149,7 @@
 @endsection
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-2">
         <div class="col-md-8">
             <div class="card">
 
@@ -162,6 +208,14 @@
                                 <button type="submit" class="continue">
                                     REGISTER
                                 </button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="mx-auto">
+                            <div class="my-1">
+                                <a href="{{ route('login') }}" class="text-danger">
+                                    You have an account
+                                </a>
                             </div>
                         </div>
                     </form>
