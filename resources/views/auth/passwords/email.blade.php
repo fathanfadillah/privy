@@ -125,7 +125,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <img class="icon" src="{{asset('../images/privy.svg')}}" alt="" height="95" width="95">
+                    <img class="icon" src="{{asset('/images/privy.svg')}}" alt="" height="95" width="95">
                     <h3 class="title font-weight-bold mt-n3">Forgot PrivyID or Password</h3>
                 <div class="subtitle mt-5 pt-1 mb-4">Please type your registered email address to
                     receive your PrivyID

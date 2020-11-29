@@ -108,7 +108,7 @@
             <div class="card">
 
                 <div class="card-body mx-auto mt-n4">
-                    <img class="icon mt-n4" src="{{asset('../images/privy.svg')}}" alt="" height="95" width="95">
+                    <img class="icon mt-n4" src="{{asset('/images/privy.svg')}}" alt="" height="95" width="95">
                     <h3 class="title font-weight-bold mt-n3 mb-4 pb-4">Register</h3>
                 
                     <form method="POST" action="{{ route('register') }}">

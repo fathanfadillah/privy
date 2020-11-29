@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title') | PrivyID</title>
 
-    <link rel="icon" href="{{asset('../images/privy_icon.png')}}"/>
+    <link rel="icon" href="{{asset('/images/privy_icon.png')}}"/>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/util.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
