@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('style')
+<title>Forgot Password</title>
 <style>
 .continue {
         -webkit-font-smoothing: antialiased;
