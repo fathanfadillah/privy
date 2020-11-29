@@ -46,6 +46,7 @@ class PrivyController extends Controller
 
     public function tentangKami()
     {
+        $src = config('app.sftp_src'). $this->path;
         // $pimpinans = DB::select('select * from pimpinans ORDER BY updated_at DESC');
         $pimpinans = Pimpinan::all();
         // $penghargaans = DB::select('select * from penghargaans ORDER BY updated_at DESC');
@@ -57,14 +58,15 @@ class PrivyController extends Controller
         //     $pimpinans->foto = '../images/404.png';
         // }
         
-        return view('pages.tentang.tentangKami',compact('pimpinans','penghargaans'));
+        return view('pages.tentang.tentangKami',compact('src','pimpinans','penghargaans'));
     }
 
     public function dokumentasiAPI()
     {
+        $src = config('app.sftp_src'). $this->path;
         // $dokumentasis = DB::select('select * from dokumentasis');
         $dokumentasis = Dokumentasi::all();
-        return view('pages.dokumentasi.dokumentasiAPI',compact('dokumentasis'));
+        return view('pages.dokumentasi.dokumentasiAPI',compact('src','dokumentasis'));
     }
 
     public function verifikasiPDF()

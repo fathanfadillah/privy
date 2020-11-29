@@ -77,7 +77,7 @@
                     <div class="pos-relative">
                         <div class="mx-auto">
                             <div id="dokumentasi-image" class="pos-absolute w-100">
-                                <img src="{{ asset('../images/404.png') }}" alt="" height="50" width="50">
+                                <img src="{{ $src.$d->icon }}" alt="" height="50" width="50">
                             </div>
                         </div>
                     </div>

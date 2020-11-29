@@ -55,8 +55,8 @@
                             @foreach ($pimpinans as $pis)
                             <div class="mx-auto col-md-6 col-xs-4 py-4 my-4">
                                 <div id="pimpinan"
-                                    class="border border-danger rounded-circle col-md-3 h-100 mx-auto my-3">
-                                    <img src="{{ asset('../images/privy/$pis->foto') }}" alt="" width="200" class="">
+                                    class="col-md-3 h-100 mx-auto my-3">
+                                    <img src="{{ $src.$pis->foto }}" alt="" width="200" class="">
                                 </div>
                                 <h4>{{$pis->nama}}</h4>
                                 <p>{{$pis->jabatan}}</p>
@@ -107,9 +107,9 @@
             ternama</p>
         <div class="row justify-content-center">
             @foreach ($penghargaans as $ph)
-            <div class="col-sm-2">
-                <div class="border border-danger my-5">
-                    <img class="" src="{{ asset('../images/privy/$ph->foto') }}" alt="">
+            <div class="col-sm-3">
+                <div class="my-5">
+                    <img class="" src="{{ $src.$ph->foto }}" alt="">
                 </div>
             </div>
             @endforeach
@@ -122,9 +122,9 @@
 @endsection
 @section('script')
 <script>
-if ($('#pimpinan').val('img') = '') {
-    $('#pimpinan').attr("src", "{{asset('../images/404.png')}}");
-}
+// if ($('#pimpinan').val('img') = '') {
+//     $('#pimpinan').attr("src", "{{asset('../images/404.png')}}");
+// }
 $('#arrow').hide();
 </script>
 @endsection
