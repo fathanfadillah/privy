@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('style')
+<title>Privy Register</title>
 <style>
     .continue {
         -webkit-font-smoothing: antialiased;

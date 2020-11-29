@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('style')
+<title>Privy Login</title>
 <style>
     .forgot {
         color: #999999;
