@@ -295,7 +295,7 @@ i {
 }
 
 .navbar-brand {
-    background-image: url("/images/logo/logo-privyid-white.png");
+    background-image: url("../images/logo/logo-privyid-white.png");
     background-size: 150px;
     height: 38px;
     width: 150px;
@@ -303,7 +303,7 @@ i {
 }
 
 .navbar-brand.scrolled {
-    background-image: url("/images/logo/privyid-logo-colored.png");
+    background-image: url("../images/logo/privyid-logo-colored.png");
     background-size: 150px;
     height: 38px;
     width: 150px;
