@@ -126,7 +126,7 @@
     }
 
     .hero {
-        background: url(https://privy.id/images/landing/bg-landing.jpg);
+        /* background: url(https://privy.id/images/landing/bg-landing.jpg); */
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
@@ -139,7 +139,7 @@
     .navd {
         /* background: black; */
         transition: 500ms ease;
-        background-color: #333333;
+        background-color: #343a40;
     }
 
     .navd.scrolled {
@@ -175,10 +175,10 @@
 }
 
 @media (max-width: 991px) {
-    .navd {
-        background-color: #333333;
+    /* .navd {
+        background-color: #343a40;
         transition: 500ms ease;
-    }
+    } */
 }
 
 @media (max-width: 1024px) {
@@ -189,7 +189,11 @@
 
 /* background header */
 .hero {
-    background: url(https://privy.id/images/landing/bg-landing.jpg);
+    background-image: url("/images/cta-bg.png");
+    background-color: #c91111;
+    mix-blend-mode: multiply;
+    filter: saturate(2);
+    /* mix-blend-mode: ; */
     background-size: cover;
     background-position: top center;
     padding: 220px 0 80px;
@@ -217,7 +221,14 @@
         -webkit-box-shadow 0.15s ease-in-out 0s;
     user-select: none;
     vertical-align: middle;
+    transition: 0.3s;
 }
+
+#btn-link:hover{
+    filter: brightness(90%);
+    transition: 0.3s;
+}
+
 
 /*navbar transparant*/
 .navd {
@@ -240,6 +251,7 @@
 
 #nav-link {
     color: white;
+    transition: 0.5s;
 }
 
 #nav-link.scrolled {
@@ -250,7 +262,7 @@
 /*navbar rubah warna*/
 
 #nav-link:hover {
-    transition: linear 0.5s;
+    transition: 0.5s;
     color: #d31919;
 }
 
@@ -261,7 +273,11 @@
 }
 
 footer {
-    background: url(https://privy.id/images/landing/bg-landing.jpg);
+    background-image: url("/images/cta-bg.png");
+    background-color: #cc1515;
+    mix-blend-mode: multiply;
+    filter: saturate(2);
+    
 }
 
 a {
@@ -279,7 +295,7 @@ i {
 }
 
 .navbar-brand {
-    background-image: url(https://privy.id/v1/img/logo-privyid-white.png);
+    background-image: url("/images/logo/logo-privyid-white.png");
     background-size: 150px;
     height: 38px;
     width: 150px;
@@ -287,7 +303,7 @@ i {
 }
 
 .navbar-brand.scrolled {
-    background-image: url(https://privy.id/assets.1.7.2/img/logo-privy-colored.png);
+    background-image: url("/images/logo/privyid-logo-colored.png");
     background-size: 150px;
     height: 38px;
     width: 150px;

@@ -40,20 +40,20 @@
                                 <a id="playstore"
                                     href="https://play.google.com/store/apps/details?id=com.privygate.privyid&hl=in"><img
                                         class="rounded-lg"
-                                        src="https://privy.id/assets.1.7.2/img/en_badge_web_generic.png" alt=""
+                                        src="{{asset('/images/privyid-download-google-play-440x142.png')}}" alt=""
                                         height="60" width="180"></a>
                             </div>
                             <div class="p-3">
                                 <a href="https://apps.apple.com/au/app/privyid-digital-signature/id1218828609"><img
                                         class="rounded-lg"
-                                        src="https://privy.id/assets.1.7.2/img/en_badge_web_generic_mac.png" alt=""
+                                        src="{{asset('/images/privyid-download-app-store-440x142.png')}}" alt=""
                                         height="60" width="180"></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mt-5">
-                    <img id="smartphone" src="https://privy.id/images/landing/hand_with_phone-min.png" alt=""
+                    <img id="smartphone" src="{{asset('/images/old-hp.png')}}" alt=""
                         height="400px" weight="200px" class="mt-5">
                 </div>
 

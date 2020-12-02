@@ -17,6 +17,18 @@
     border-bottom: 1px solid;
     color: white;
 }
+
+.red{
+    background: #880d0d;
+    filter: contrast(50%);
+    transition: 0.3s;
+}
+
+.red:hover{
+    filter: brightness(90%);
+    filter: contrast(80%);
+    transition: 0.3s;
+}
 </style>
 @endsection
 @section('title','Verfikasi Tanda Tangan Digital bersertifikat')
@@ -49,7 +61,7 @@
                                 </div>
                             </div>
                             <button
-                                type="submit" class="w-full text-decoration-none btn btn-link btn-lg bg-danger rounded-pill text-white border-0 m-auto">
+                                type="submit" class="w-full text-decoration-none btn btn-link btn-lg red rounded-pill text-white border-0 m-auto">
                                 Verify Document
                             </button>
                         </form>
@@ -70,6 +82,16 @@
 $(document).ready(function() {
     $('footer').hide();
     $('#arrow').hide();
+    
+
+});
+
+$(window).resize(function(){
+	if ($(window).width() <= 770){	
+		// do something here
+        $('.navd').css('background-color', 'transparent'); 
+
+	}	
 });
 
 $('#file').on('change',function(){
