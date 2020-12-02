@@ -274,7 +274,7 @@
 }
 
 footer {
-    background-image: url("/images/cta-bg.png");
+    background-image: url("../images/cta-bg.png");
     background-color: #cc1515;
     mix-blend-mode: multiply;
     filter: saturate(2);
