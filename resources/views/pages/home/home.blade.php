@@ -6,11 +6,12 @@
 /* liputans */
 #liputans {
     filter: grayscale(100%);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #liputans:hover {
     filter: grayscale(0%);
+    transition: 0.5s;
 }
 </style>
 @stack('klien-style')
@@ -37,14 +38,14 @@
                     <div class="row justify-content-start mt-n4">
                         <div class="d-flex flex-row pt-n5">
                             <div class="p-3">
-                                <a id="playstore"
+                                <a id="store"
                                     href="https://play.google.com/store/apps/details?id=com.privygate.privyid&hl=in"><img
                                         class="rounded-lg"
                                         src="{{asset('/images/privyid-download-google-play-440x142.png')}}" alt=""
                                         height="60" width="180"></a>
                             </div>
                             <div class="p-3">
-                                <a href="https://apps.apple.com/au/app/privyid-digital-signature/id1218828609"><img
+                                <a id="store" href="https://apps.apple.com/au/app/privyid-digital-signature/id1218828609"><img
                                         class="rounded-lg"
                                         src="{{asset('/images/privyid-download-app-store-440x142.png')}}" alt=""
                                         height="60" width="180"></a>
@@ -54,7 +55,7 @@
                 </div>
                 <div class="col-md-4 mt-5">
                     <img id="smartphone" src="{{asset('/images/old-hp.png')}}" alt=""
-                        height="400px" weight="200px" class="mt-5">
+                        height="400" weight="200" class="mt-5">
                 </div>
 
             </div>
@@ -96,14 +97,14 @@
                             @foreach($keuntungans as $k)
                             <div class="col-sm-4 mr-auto p-3">
                                 <div class="row">
-                                    <div class="col-sm-1">
-                                        <img src="{{$src.$k->icon}}" alt="" width="200" class="">
+                                    <div class="col-sm-3">
+                                        <img src="{{$src.$k->icon}}" alt="" width="60" height="60" class="">
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-sm-6 pt-3 mt-1">
                                         <h4 class="content-title font-weight-bold">{{$k->title_keuntungan}}</h4>
                                     </div>
                                 </div>
-                                <div class="row col-md-12">
+                                <div class="row col-md-12 mt-1">
                                     <p class="text-justify content-description font-weight-normal">
                                         {{$k->deskripsi_keuntungan}}</p>
                                 </div>
@@ -168,15 +169,14 @@
                 </div>
                 <div class="">
                     <div col="mx-auto">
-                        @include('pages.home.klien')
+                        @include('pages.home.klienFirst')
                     </div>
                 </div>
                 <div class="">
                     <div col="mx-auto">
-                        @include('pages.home.klien')
+                        @include('pages.home.klienLast')
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="">
@@ -186,7 +186,7 @@
                     <div class="row mx-auto">
                         @foreach($liputans as $l)
                         <div class="col-md-3 mx-auto my-5">
-                            <img id="liputans" src="{{ $src.$l->foto }}" alt="" class="h-50 w-50">
+                            <img id="liputans" src="{{ $src.$l->foto }}" alt="" height="50" width="150" class="">
                         </div>
                         @endforeach
                     </div>

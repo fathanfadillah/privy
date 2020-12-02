@@ -33,7 +33,8 @@ class PrivyController extends Controller
             //  $enterprises = DB::select('select * from enterprises');
             $enterprises = Enterprise::all();
             //  $kliens = DB::select('select * from kliens');
-            $kliens = Klien::all();
+            $kliensFirst = Klien::limit(13)->get();
+            $kliensLast = Klien::limit(12)->orderBy('id','desc')->get();
             //  $liputans = DB::select('select * from liputans');
             $liputans = Liputan::all();
             $sertifikats = Sertifikat::all();
@@ -41,7 +42,7 @@ class PrivyController extends Controller
 
             $src = config('app.sftp_src'). $this->path;
              
-        return view('pages.home.home',compact('src','keuntungans','enterprises','kliens','liputans','sertifikats'));
+        return view('pages.home.home',compact('src','keuntungans','enterprises','kliensFirst','kliensLast','liputans','sertifikats'));
     }
 
     public function tentangKami()

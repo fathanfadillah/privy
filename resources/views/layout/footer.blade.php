@@ -67,7 +67,7 @@
                 <ul class="list-inline social-list">
                     <li class="list-inline-item">
                         <a href="https://www.facebook.com/privyid" target="_blank">
-                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-facebook font-weight-bolder"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
@@ -77,7 +77,17 @@
                     </li>
                     <li class="list-inline-item">
                         <a href="https://www.instagram.com/privy_id/">
-                            <i class="fa fa-instagram"></i>
+                            <i class="fa fa-instagram font-weight-bolder"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/privyid">
+                            <i class="fa fa-twitter font-weight-bolder"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/company/privyid">
+                            <i class="fa fa-linkedin font-weight-bolder"></i>
                         </a>
                     </li>
                 </ul>
