@@ -189,7 +189,7 @@
 
 /* background header */
 .hero {
-    background-image: url("/images/cta-bg.png");
+    background-image:url('../images/cta-bg.png');
     background-color: #c91111;
     mix-blend-mode: multiply;
     filter: saturate(2);
