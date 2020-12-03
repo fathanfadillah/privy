@@ -27,6 +27,7 @@
 <script>
 $(".owl-carousel").owlCarousel({
         items: 6,
+        rtl:true,
         loop: true,
         margin: 20,
         autoplay: true,

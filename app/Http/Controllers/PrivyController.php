@@ -33,8 +33,9 @@ class PrivyController extends Controller
             //  $enterprises = DB::select('select * from enterprises');
             $enterprises = Enterprise::all();
             //  $kliens = DB::select('select * from kliens');
-            $kliensFirst = Klien::limit(13)->get();
-            $kliensLast = Klien::limit(12)->orderBy('id','desc')->get();
+            $count = Klien::count()/2;
+            $kliensFirst = Klien::limit($count)->get();
+            $kliensLast = Klien::limit($count)->orderBy('id','desc')->get();
             //  $liputans = DB::select('select * from liputans');
             $liputans = Liputan::all();
             $sertifikats = Sertifikat::all();
