@@ -13,7 +13,7 @@
 <div class="owl-carousel my-5 py-3">
     <!-- <div class="col-md-6"> -->
     @foreach($kliensLast as $kL)
-        <div class="h-50 w-50"><img src="{{$src.$kL->foto}}" alt="">
+        <div class="h-50 w-50"><img src="{{$src.$kL->foto}}" class="img-fluid" alt="Responsive image">
         </div>
     @endforeach
     <!-- </div> -->

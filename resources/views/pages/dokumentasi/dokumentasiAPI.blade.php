@@ -48,6 +48,11 @@
 }
 /* navsrolled */
 
+@media screen and (max-width: 767px){
+    .hero {
+    margin-bottom: 10%;}
+}
+
 </style>
 @endsection
 @section('title','Developer Console')
@@ -101,7 +106,7 @@
     </div>
 </div>
 
-<div class="testimony ">
+<div class="testimony">
     <div class="container py-5">
         <div class="row">
             <div class="col-md-6 text-white mx-auto">

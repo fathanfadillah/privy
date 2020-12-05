@@ -56,7 +56,7 @@
                             <div class="mx-auto col-md-6 col-xs-4 my-2">
                                 <div id="pimpinan"
                                     class="mx-auto my-3">
-                                    <img src="{{ $src.$pis->foto }}" alt="" width="200" height="230" class="mx-auto">
+                                    <img src="{{ $src.$pis->foto }}" class="img-fluid mx-auto" alt="Responsive image" width="200" height="230">
                                 </div>
                                 <h4>{{$pis->nama}}</h4>
                                 <p>{{$pis->jabatan}}</p>
@@ -109,7 +109,7 @@
             @foreach ($penghargaans as $ph)
             <div class="col-sm-3">
                 <div class="my-5">
-                    <img class="" src="{{ $src.$ph->foto }}" alt="">
+                    <img class="img-fluid mx-auto" alt="Responsive image" src="{{ $src.$ph->foto }}">
                 </div>
             </div>
             @endforeach
