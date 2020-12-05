@@ -3,7 +3,7 @@
 @section('content')
 <!-- header -->
 <div class="mb-auto mt-md-n5 mb-md-5">
-    <div class="hero">
+    <div class="hero h-75">
         <div class="container justify-content-center">
             <h2 class="display-4 text-center text-white font-weight-bold">Tentang Kami</h2>
         </div>
@@ -53,10 +53,10 @@
 
                         <div class="row">
                             @foreach ($pimpinans as $pis)
-                            <div class="mx-auto col-md-6 col-xs-4 py-4 my-4">
+                            <div class="mx-auto col-md-6 col-xs-4 my-2">
                                 <div id="pimpinan"
-                                    class="col-md-3 h-100 mx-auto my-3">
-                                    <img src="{{ $src.$pis->foto }}" alt="" width="200" class="">
+                                    class="mx-auto my-3">
+                                    <img src="{{ $src.$pis->foto }}" alt="" width="200" height="230" class="mx-auto">
                                 </div>
                                 <h4>{{$pis->nama}}</h4>
                                 <p>{{$pis->jabatan}}</p>
