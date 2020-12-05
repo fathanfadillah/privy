@@ -13,6 +13,19 @@
     filter: grayscale(0%);
     transition: 0.5s;
 }
+
+@media (max-width: 770px) {
+    #store{
+        display: none;}
+    .hero{
+        margin-bottom:5%;
+        height: 80%;
+    }
+}
+@media (min-width: 770px) {
+    #store-small-size{
+        display: none;}
+}
 </style>
 @stack('klien-style')
 @endsection
@@ -34,6 +47,20 @@
                             di mata hukum.</p>
                     </div>
 
+                    <div id="store-small-size" class="row-justify-content-start">
+                        <div class="">
+                            <div class=""><a
+                                href="https://play.google.com/store/apps/details?id=com.privygate.privyid&hl=in"><img
+                                    class="rounded-lg"
+                                    src="{{asset('/images/privyid-download-google-play-440x142.png')}}" class="img-fluid" alt="Responsive image"
+                                    height="60" width="180"></a></div>
+                            <div class="pt-3"><a href="https://apps.apple.com/au/app/privyid-digital-signature/id1218828609"><img
+                                class="rounded-lg"
+                                src="{{asset('/images/privyid-download-app-store-440x142.png')}}" class="img-fluid" alt="Responsive image"
+                                height="60" width="180"></a></div>
+                        </div>
+                    </div>
+
                     <div class="space mt-5 pt-5"></div>
                     <div class="row justify-content-start mt-n4">
                         <div class="d-flex flex-row pt-n5">
@@ -41,13 +68,13 @@
                                 <a id="store"
                                     href="https://play.google.com/store/apps/details?id=com.privygate.privyid&hl=in"><img
                                         class="rounded-lg"
-                                        src="{{asset('/images/privyid-download-google-play-440x142.png')}}" alt=""
+                                        src="{{asset('/images/privyid-download-google-play-440x142.png')}}" class="img-fluid" alt="Responsive image"
                                         height="60" width="180"></a>
                             </div>
                             <div class="p-3">
                                 <a id="store" href="https://apps.apple.com/au/app/privyid-digital-signature/id1218828609"><img
                                         class="rounded-lg"
-                                        src="{{asset('/images/privyid-download-app-store-440x142.png')}}" alt=""
+                                        src="{{asset('/images/privyid-download-app-store-440x142.png')}}" class="img-fluid" alt="Responsive image"
                                         height="60" width="180"></a>
                             </div>
                         </div>
