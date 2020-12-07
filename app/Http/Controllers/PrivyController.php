@@ -100,7 +100,7 @@ class PrivyController extends Controller
         ->get();
         // dd($faqs);
 
-        return view('pages.faq.faq',compact('faqs'));
+        return view('../pages/faq/faq',compact('faqs'));
     }
 
     public function bantuan()
