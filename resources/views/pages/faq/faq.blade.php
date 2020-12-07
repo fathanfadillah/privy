@@ -75,7 +75,7 @@
                 <div class="row">
                     <div class="col-sm-5 mx-auto pl-5 py-4">
                         <div id="searchDiv" class="">
-                            <form id="searchBar" action="/faq/search" class="mx-auto" method="GET">
+                        <form id="searchBar" action="{{route('faq.search')}}" class="mx-auto" method="GET">
                                 <input id="searchInput" type="search" name="search" placeholder="Search . . .">
                                 <i class="fa fa-search"></i>
                             </form>
