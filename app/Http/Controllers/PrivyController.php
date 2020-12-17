@@ -106,7 +106,7 @@ class PrivyController extends Controller
     public function bantuan()
     {
         // $batuans = Pimpinan::all();
-        return view('pages.bantuan.bantuan');
+        return view('pages.kontak.kontakBisnis');
     }
 
 }
