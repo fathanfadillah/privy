@@ -59,7 +59,7 @@ h1 {
                     href="mailto:helpdesk@privy.id?subject=%23KeluhanPelanggan%20-%20(isi%20dengan%20nama%20Anda)&amp;body=Hai%20team%20Help%20Desk%20Privy%2C%0ANama%20saya%20%3A%0AEmail%20saya%20%3A%0AKeluhan%20saya%20%3A%20(ceritakan%20masalah%20Anda%20disini)%0A%0A%0A%0AMohon%20bantuannya%20untuk%20keluhan%20saya%20tersebut.%0A%0ATerimakasih.%20"
                     target="_blank">Helpdesk@privy.id</a></i></p>
 
-        <form action="/kontakbisnis" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('kontakbisnis.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <!-- <input type="hidden" name="oid" value="00D2v000001VD0y">
             <input type="hidden" name="retURL" value="https://privy.id/"> -->

@@ -73,7 +73,7 @@ class KontakController extends Controller
         
         $kontaks->save();
 
-        return redirect('/kontakbisnis')->with('status','Terima Kasih Telah meng-submit');
+        return redirect()->route('kontakbisnis')->with('status','Terima Kasih Telah meng-submit');
     }
 
 }

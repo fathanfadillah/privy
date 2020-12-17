@@ -23,8 +23,8 @@ Route::get('/dokumentasiapi', 'PrivyController@dokumentasiAPI')->name('dokumenta
 Route::post('/verifikasipdf/store', 'VerifikasiController@store')->name('verifikasipdf.store');
 Route::get('/verifikasipdf', 'VerifikasiController@index')->name('verifikasipdf');
 
+Route::post('/kontakbisnis/store', 'KontakController@store')->name('kontakbisnis.store');;
 Route::get('/kontakbisnis', 'KontakController@index')->name('kontakbisnis');
-Route::post('/kontakbisnis', 'KontakController@store');
 
 Route::get('/faq/search', 'PrivyController@search')->name('faq.search');
 Route::get('/faq', 'PrivyController@faq')->name('faq');
