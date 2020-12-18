@@ -116,7 +116,7 @@ h1 {
             <div class="form-group">
                 {{-- <label for="Divisi"> Divisi / <i> Division </i></label> --}}
                 <input id="divisi" maxlength="100" name="divisi" class="form-control rounded-pill" type="text"
-                    placeholder="HR, Procurement, Purchasing, Finance, etc" value="{{old('divisi')}}" required />
+                    placeholder="Division. Ex: HR, Procurement, Purchasing, Finance, etc" value="{{old('divisi')}}" required />
                 @error('divisi')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
@@ -126,7 +126,8 @@ h1 {
                 {{-- Jabatan Anda / <i> Position </i> --}}
                 <select id="jabatan" name="jabatan" title="Job Level"
                     class="form-control rounded-pill">
-                    <option value="C-level, Director, or Managing Partner" selected>C-level, Director, or Managing Partner
+                    <option value="" disabled selected hidden>Job Level</option>
+                    <option value="C-level, Director, or Managing Partner">C-level, Director, or Managing Partner
                     </option>
                     <option value="Founder , Advisor, Commissioner Board, Senior Partner">Founder , Advisor,
                         Commissioner
@@ -142,7 +143,7 @@ h1 {
 
             <div class="form-group">
                 {{-- <label for="company">Nama Perusahaan / <i>Company Name</i> </label> --}}
-                <input type="text" placeholder="PT.ABCD , ABCD.Ltd, ABCD.Inc, ABCD.Corp, etc " class="form-control rounded-pill"
+                <input type="text" placeholder="Company Name. Ex: PT.ABCD , ABCD.Ltd, ABCD.Inc, ABCD.Corp, etc" class="form-control rounded-pill"
                     id="company" maxlength="40" name="namaPerusahaan" value="{{old('namaPerusahaan')}}" required>
                 @error('namaPerusahaan')
                 <div class="alert alert-danger">{{ $message }}</div>
@@ -151,7 +152,7 @@ h1 {
 
             <div class="form-group">
                 {{-- <label>Nama Merek Dagang / <i>Brand Name</i> </label> --}}
-                <input type="text" placeholder="ABCD" class="form-control rounded-pill input-lg" maxlength="255"
+                <input type="text" placeholder="Brand Name. EX: ABCD" class="form-control rounded-pill input-lg" maxlength="255"
                     name="namaBrand" value="{{old('namaBrand')}}">
             </div>
 
@@ -162,6 +163,7 @@ h1 {
                 </label> --}}
                 <select class="form-control rounded-pill input-lg w-100 mr-5 pr-5" id="industry" name="kategoriIndustri"
                     placeholder="Silahkan memilih opsi dibawah" value="{{old('kategoriIndustri')}}" required>
+                    <option value="" disabled hidden selected>Use for (external/internal) document usage?</option>
                     <option value="Conglomeration">Conglomeration</option>
                     <option value="Financial Service &amp; FinTech">Financial Service &amp; FinTech</option>
                     <option
@@ -203,11 +205,12 @@ h1 {
                 </select>
             </div>
 
-            <h3 class="h4 font-weight-bold">Document Usage</h3>
+            <h3 class="h4 font-weight-bold pt-3">Document Usage</h3>
             <div class="form-group">
                 {{-- Digunakan untuk dokumen (external/internal) / <i> Use for (external/internal) document usage? </i> --}}
                 <select id="00N2v00000YVvXq" name="tipeDokumen" title="External/Internal Usage" class="form-control rounded-pill input-lg"
                     value="{{old('tipeDokumen')}}" required>
+                    <option value="" disabled hidden selected>Use for (external/internal) document usage?</option>
                     <option value="Internal">Internal</option>
                     <option value="External">External</option>
                 </select>
@@ -216,7 +219,7 @@ h1 {
             <div class="form-group">
                 {{-- Contoh dokumen / <i> Document Example </i>  --}}
                 <textarea id="00N2v00000YVvXv" name="contohDokumen"
-                    type="text" wrap="soft" class="form-control notes" rows="2" placeholder="&nbsp;Invoice, Payroll, PO, etc"
+                    type="text" wrap="soft" class="form-control notes" rows="2" placeholder="&nbsp; Document Example. Ex: Invoice, Payroll, PO, etc"
                     value="{{old('contohDokumen')}}" required></textarea>
                 @error('contohDokumen')
                 <div class="alert alert-danger">{{ $message }}</div>
@@ -228,6 +231,7 @@ h1 {
                     <i>How many signature do you do per month?</i></label> --}}
                 <select class="form-control rounded-pill input-lg" id="00N2v00000VDVqM" name="jumlahDokumen"
                     placeholder="Silahkan memilih opsi dibawah" value="{{old('jumlahDokumen')}}" required>
+                    <option value="" selected disabled hidden>How many signature do you do per month?</option>
                     <option value="1 – 1.000">1 – 1.000</option>
                     <option value="1.001 – 10.000">1.001 – 10.000</option>
                     <option value="10.001 – 50.000">10.001 – 50.000</option>
@@ -322,15 +326,15 @@ h1 {
 
             <div class="form-group mb-4">
                 {{-- <label>Catatan / <i>Notes</i></label> --}}
-                <textarea class="form-control notes" placeholder=" &nbsp;Tuliskan pesan anda untuk kami / Write your notes for us"
+                <textarea class="form-control notes" placeholder=" &nbsp;Anything else you would like to ask?"
                     id="00N2v00000TXeuKEAT" name="catatan" rows="3" type="text" wrap="soft"></textarea>
             </div>
 
             {{-- <button class="g-recaptcha" 
             data-sitekey="reCAPTCHA_site_key" 
             data-callback='onSubmit' 
-            data-action='submit'>Submit</button>
-            captcha --}}
+            data-action='submit'>Submit</button> --}}
+            {{-- captcha --}}
 
             <input class="btn btn-danger w-100 rounded-pill btn-lg" type="submit" value="Submit" onclick="return foo();">
         </form>
@@ -341,8 +345,9 @@ h1 {
 
 @endsection
 @section('script')
-<script type="text/javascript">
+
 <script src="https://www.google.com/recaptcha/api.js"></script>
+<script type="text/javascript">
 
 function onSubmit(token) {
     document.getElementById("demo-form").submit();
