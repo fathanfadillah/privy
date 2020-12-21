@@ -163,7 +163,7 @@ h1 {
                 </label> --}}
                 <select class="form-control rounded-pill input-lg w-100 mr-5 pr-5" id="industry" name="kategoriIndustri"
                     placeholder="Silahkan memilih opsi dibawah" value="{{old('kategoriIndustri')}}" required>
-                    <option value="" disabled hidden selected>Use for (external/internal) document usage?</option>
+                    <option value="" selected hidden disabled>What industry are you in?</option>
                     <option value="Conglomeration">Conglomeration</option>
                     <option value="Financial Service &amp; FinTech">Financial Service &amp; FinTech</option>
                     <option
@@ -230,7 +230,7 @@ h1 {
                 {{-- <label>Berapa jumlah tanda tangan yang perusahaan lakukan dalam satu bulan? /
                     <i>How many signature do you do per month?</i></label> --}}
                 <select class="form-control rounded-pill input-lg" id="00N2v00000VDVqM" name="jumlahDokumen"
-                    placeholder="Silahkan memilih opsi dibawah" value="{{old('jumlahDokumen')}}" required>
+                    placeholder="Silahkan memilih opsi dibawah" value="{{old('jumlahDokumen')}}">
                     <option value="" selected disabled hidden>How many signature do you do per month?</option>
                     <option value="1 – 1.000">1 – 1.000</option>
                     <option value="1.001 – 10.000">1.001 – 10.000</option>
@@ -243,8 +243,8 @@ h1 {
             <div class="form-group">
                 {{-- <label>Bagaimana perusahaan anda menandatangani sebuah dokumen? /
                     <i>How do you sign your documents?</i></label> --}}
-                <select class="form-control rounded-pill input-lg" id="00N2v00000On9tO" name="caraTandaTangan"
-                    placeholder="Silahkan memilih opsi dibawah" value="{{old('caraTandaTangan')}}" required>
+                <select class="form-control rounded-pill input-lg"  name="caraTandaTangan"
+                    placeholder="Silahkan memilih opsi dibawah" value="{{old('caraTandaTangan')}}" >
                     <option value="Using certified digital signature">Using certified digital signature </option>
                     <option value="Using uncertified digital signature">Using uncertified digital signature
                     </option>
@@ -257,8 +257,7 @@ h1 {
                     menggunakan
                     layanan kami? /
                     <i>According to your current system, what is the best way to use our services?</i></label> --}}
-                <select class="form-control1 form-control rounded-pill input-lg" id="00N2v00000On9tP" name="caraPenggunaan"
-                    placeholder="Silahkan memilih opsi dibawah">
+                <select class="form-control1 form-control rounded-pill input-lg" value="{{old('caraPenggunaan')}}" name="caraPenggunaan">
                     <option value="" selected hidden disabled>How Did You Use Our Service?</option>
                     <option maxlength="255" value="Using our platform (PrivyID) as is">Using our platform (PrivyID)
                         as is
@@ -313,7 +312,7 @@ h1 {
                     date?  --}}
                 </i><select class="form-control rounded-pill input-lg" name="waktuImplementasi" placeholder="What is the expected
                     implementation
-                    date?" required>
+                    date?" value="{{old('caraTandaTangan')}}">
                     {{-- <option value="" >Please Choose...</option> --}}
                     <option value="" disabled selected hidden>What is the expected implementation date</option>
                     <option value="A month from now">A month from now</option>
@@ -327,7 +326,7 @@ h1 {
             <div class="form-group mb-4">
                 {{-- <label>Catatan / <i>Notes</i></label> --}}
                 <textarea class="form-control notes" placeholder=" &nbsp;Anything else you would like to ask?"
-                    id="00N2v00000TXeuKEAT" name="catatan" rows="3" type="text" wrap="soft"></textarea>
+                    name="catatan" rows="3" type="text" wrap="soft"></textarea>
             </div>
 
             {{-- <button class="g-recaptcha" 
