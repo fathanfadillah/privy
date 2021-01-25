@@ -50,7 +50,7 @@
                     </li>
 
                     <li>
-                        <a href="https://blog.privy.id">Blog</a>
+                        <a href="{{route('blog')}}">Blog</a>
                     </li>
                 </ul>
             </div>

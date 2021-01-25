@@ -101,18 +101,17 @@
         <hr>
         <br />
         <br />
-        <div class=""></div>
-        <h5 class="text-center">Penghargaan</h5>
-        <p class="text-center">Dalam usia muda, PrivyID telah berhasil mendapatkan penghargaan dari berbagai lembaga
-            ternama</p>
-        <div class="row justify-content-center">
-            @foreach ($penghargaans as $ph)
-            <div class="col-sm-3">
-                <div class="my-5">
-                    <img class="img-fluid mx-auto" alt="Responsive image" src="{{ $src.$ph->foto }}">
+        <div class="container-md py-5 text-center col-md-9">
+            <h3 class="font-weight-bold">Penghargaan</h3>
+            <p class="pb-5">Dalam usia muda, PrivyID telah berhasil mendapatkan penghargaan dari berbagai lembaga
+                ternama</p>
+            <div class="row mx-auto">
+                @foreach ($penghargaans as $ph)
+                <div class="col-md-3 mx-auto">
+                        <img class="img-fluid mx-auto" alt="Responsive image" src="{{ $src.$ph->foto }}">
                 </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
     </div>
 </div>

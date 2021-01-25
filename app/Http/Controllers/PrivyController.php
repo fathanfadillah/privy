@@ -7,12 +7,11 @@ use App\Enterprise;
 use App\Klien;
 use App\Liputan;
 use App\Sertifikat;
-
 use App\Pimpinan;
 use App\Penghargaan;
-
 use App\Dokumentasi;
 use App\Faq;
+use App\Blog;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
@@ -108,5 +107,13 @@ class PrivyController extends Controller
         // $batuans = Pimpinan::all();
         return view('pages.kontak.kontakBisnis');
     }
+
+    public function blog()
+    {
+        // $dokumentasis = DB::select('select * from dokumentasis');
+        $blogs = Blog::all();
+        return view('pages.blog',compact('blogs'));
+    }
+
 
 }

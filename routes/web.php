@@ -42,6 +42,9 @@ Route::get('/enterprise', 'EnterpriseController@index')->name('enterprise');
 //job
 Route::get('/job', 'JobController@index')->name('job');
 
+// blog
+Route::get('/blog', 'PrivyController@blog')->name('blog');
+
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

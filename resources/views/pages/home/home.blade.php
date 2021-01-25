@@ -1,33 +1,35 @@
 @extends('layout.app')
+@include('pages.home.klienFirst')
+@include('pages.home.klienLast')
 @section('title','Tanda Tangan Digital')
 @section('style')
-<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-<style>
-/* liputans */
-#liputans {
-    filter: grayscale(100%);
-    transition: 0.5s;
-}
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <style>
+        /* liputans */
+        #liputans {
+            filter: grayscale(100%);
+            transition: 0.5s;
+        }
 
-#liputans:hover {
-    filter: grayscale(0%);
-    transition: 0.5s;
-}
+        #liputans:hover {
+            filter: grayscale(0%);
+            transition: 0.5s;
+        }
 
-@media (max-width: 770px) {
-    #store{
-        display: none;}
-    .hero{
-        margin-bottom:5%;
-        height: 80%;
-    }
-}
-@media (min-width: 770px) {
-    #store-small-size{
-        display: none;}
-}
-</style>
-@stack('klien-style')
+        @media (max-width: 770px) {
+            #store{
+                display: none;}
+            .hero{
+                margin-bottom:5%;
+                height: 80%;
+            }
+        }
+        @media (min-width: 770px) {
+            #store-small-size{
+                display: none;}
+        }
+    </style>
+    @stack('klien-style')
 @endsection
 
 @section('content')
@@ -195,24 +197,24 @@
                 </div>
                 <div class="">
                     <div col="mx-auto">
-                        @include('pages.home.klienFirst')
+                        @stack('klien-first')
                     </div>
                 </div>
                 <div class="">
                     <div col="mx-auto">
-                        @include('pages.home.klienLast')
+                        @stack('klien-last')
                     </div>
                 </div>
             </div>
         </div>
         <div class="">
-            <div class="container-md py-5 text-center col-md-10">
+            <div class="container-md py-5 text-center col-md-9">
                 <div>
-                    <h2 class="font-weight-bold mb-5">Telah Diliput</h2>
+                    <h2 class="font-weight-bold mb-5">Membership</h2>
                     <div class="row mx-auto">
                         @foreach($liputans as $l)
-                        <div class="col-md-3 mx-auto my-5">
-                            <img id="liputans" src="{{ $src.$l->foto }}" class="img-fluid h-25 w-75" alt="Responsive image">
+                        <div class="col-md-3 mx-auto">
+                            <img id="liputans" src="{{ $src.$l->foto }}" class="img-fluid h-50 w-75 mx-auto img-responsive" alt="Responsive image">
                         </div>
                         @endforeach
                     </div>
@@ -234,9 +236,9 @@
         </div>
         @endsection
         @section('script')
-        @stack('klien-script')
-        <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-        <script>
-        $('#arrow').hide();
-        </script>
+            @stack('klien-script')
+            <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+            <script>
+                $('#arrow').hide();
+            </script>
         @endsection

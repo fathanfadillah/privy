@@ -203,10 +203,8 @@
                 <h3>{{$f->kategori}}</h3>
             </div>
             <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>{{$f->question}}</p>
-                    <p class="blockquote-footer">{{$f->answer}}</p>
-                </blockquote>
+                    <p class="blockquote font-weight-bold">{{$f->question}}</p>
+                    <p class="">{{$f->answer}}</p>
             </div>
         </div>
         @endforeach
