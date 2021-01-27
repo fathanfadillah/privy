@@ -97,9 +97,21 @@
             <div class="col-md-6">
 
                 <div class="row p-5">
-                    <h2 class="font-weight-bold">Top Asked Question</h2>
+                    <div class="d-flex col-md-12">
+                        <div class="">
+                            <h2 class="font-weight-bold">Top Asked Question</h2>
+                        </div>
+                        <div class="ml-auto">
+                            <span>
+                                <a href="#" class="align-items-center text-danger ">see all</a>
+                            </span>
+                            
+                        </div>
+                    </div>
                     <div id="accordionTop">
-                        @foreach($faqstop as $index => $ft)
+                        {{-- @php($i=1) --}}
+                        @foreach($faqstop->take(10) as $index => $ft)
+                        {{-- @if ($i<4) --}}
                         <div class="card my-3">
                             <div class="card-header bg-white border-0 h-25 rounded-lg" id="heading{{ $index }}">
 
@@ -118,9 +130,9 @@
                                 data-parent="#accordionTop">
                                 <div class="card-body">{!!$ft->answer!!}</div>
                             </div>
-                        </div>
-                        <!--  -->
-
+                        </div>                                
+                        {{-- @endif --}}
+                            {{-- @php($i++) --}}
                         @endforeach
 
                     </div>
@@ -131,9 +143,18 @@
             @isset($faqsen)
             <div id="right" class="col-md-6 p-5">
                 <div class="row">
-                    <h2 class="font-weight-bold">Enterprise</h2>
+                    <div class="d-flex col-md-12">
+                        <div class="">
+                            <h2 class="font-weight-bold">Enterprise</h2>
+                        </div>
+                        <div class="ml-auto">
+                            <span>
+                                <a href="#" class="align-items-center text-danger ">see all</a>
+                            </span>
+                        </div>
+                    </div>
                     <div id="accordionEn">
-                        @foreach($faqsen as $index => $fe)
+                        @foreach($faqsen->take(5) as $index => $fe)
                         <div class="card my-3">
                             <div class="card-header bg-white border-0 h-25 rounded-lg" id="heading{{ $index }}">
 
@@ -162,11 +183,19 @@
                 @endisset
                 @isset($faqsgen)
                 <div class="row my-3">
-
-                    <h2 class="font-weight-bold">General</h2>
+                    <div class="d-flex col-md-12">
+                        <div class="">
+                            <h2 class="font-weight-bold">General</h2>
+                        </div>
+                        <div class="ml-auto">
+                            <span>
+                                <a href="#" class="align-items-center text-danger ">see all</a>
+                            </span>
+                        </div>
+                    </div>
                     <div id="accordionGen">
 
-                        @foreach($faqsgen as $index => $fg)
+                        @foreach($faqsgen->take(5) as $index => $fg)
                         <div class="card my-3">
                             <div class="card-header bg-white border-0 h-25 rounded-lg" id="headingEnterprise">
 
@@ -197,14 +226,24 @@
 
     <div class="container">
         @isset($faqs)
-        @foreach($faqs as $f)
-        <div class="card my-5">
-            <div class="card-header">
-                <h3>{{$f->kategori}}</h3>
-            </div>
-            <div class="card-body">
-                    <p class="blockquote font-weight-bold">{{$f->question}}</p>
-                    <p class="">{{$f->answer}}</p>
+        @foreach($faqs as $index => $fs)
+        <div id="accordionSearch">
+            <div class="card my-3">
+                <div class="card-header bg-white border-0 h-25 rounded-lg" id="heading{{$index}}">
+                    <div class="row">
+                        <div class="col-md-10 font-weight-bold">{{$fs->question}}</div>
+                        <div class="col-md-2">
+                            <a class="btn btn-link collapsed text-primary float-right"
+                                data-toggle="collapse" data-target="#collapseSearch{{$index}}"
+                                aria-expanded="false" aria-controls="collapseSearch">
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </a></div>
+                    </div>
+                </div>
+                <div id="collapseSearch{{$index}}" class="collapse" aria-labelledby="heading{{$index}}"
+                    data-parent="#accordionSearch">
+                    <div class="card-body">{!!$fs->answer!!}</div>
+                </div>
             </div>
         </div>
         @endforeach

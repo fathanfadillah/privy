@@ -4,10 +4,10 @@
             <div class="col-md-3">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="{{asset('enterprise')}}">EnterpriseID</a>
+                        {{-- <a href="{{asset('enterprise')}}">EnterpriseID</a> --}}
                     </li>
                     <li>
-                        <a href="https://privy.id/how-to-use"> Panduan Penggunaan</a>
+                        <a href="https://www.youtube.com/watch?v=xPyz6XAgYfw"> Panduan Penggunaan</a>
                     </li>
 
                     <li>
@@ -42,11 +42,11 @@
                     </li>
 
                     <li>
-                        <a href="https://privy.id/kebijakan-privasi">Kebijakan Privasi</a>
+                        {{-- <a href="https://privy.id/kebijakan-privasi">Kebijakan Privasi</a> --}}
                     </li>
 
                     <li>
-                        <a href="https://repository.privy.id/">Dokumen Repository</a>
+                        <a href="{{url('/repository')}}">Dokumen Repository</a>
                     </li>
 
                     <li>

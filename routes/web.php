@@ -45,6 +45,11 @@ Route::get('/job', 'JobController@index')->name('job');
 // blog
 Route::get('/blog', 'PrivyController@blog')->name('blog');
 
+// repository
+Route::get('/repository', function () {
+    return view('pages.repository');
+});
+
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

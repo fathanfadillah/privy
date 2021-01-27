@@ -35,8 +35,8 @@
                         margin: 20,
                         autoplay: true,
                         slideTransition: 'linear',
-                        autoplayTimeout: 1500,
-                        autoplaySpeed: 3000,
+                        autoplayTimeout: 5000,
+                        autoplaySpeed: 5000,
                         autoplayHoverPause: false
                     });
     </script>
