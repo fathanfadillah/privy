@@ -26,7 +26,8 @@ Route::get('/verifikasipdf', 'VerifikasiController@index')->name('verifikasipdf'
 Route::post('/kontakbisnis/store', 'KontakController@store')->name('kontakbisnis.store');;
 Route::get('/kontakbisnis', 'KontakController@index')->name('kontakbisnis');
 
-Route::get('/faq/search', 'PrivyController@search')->name('faq.search');
+Route::get('/faq/search', 'PrivyController@faqSearch')->name('faq.search');
+Route::get('/faq/category/{category}', 'PrivyController@faqCategory');
 Route::get('/faq', 'PrivyController@faq')->name('faq');
 
 Route::get('/bantuan', 'PrivyController@bantuan')->name('bantuan');

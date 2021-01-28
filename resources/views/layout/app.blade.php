@@ -50,13 +50,13 @@
 
 <!-- icon -->
 <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-<script type="text/javascript">
+{{-- <script type="text/javascript">
 $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
-</script>
+</script> --}}
 
 @yield('script')
 

@@ -94,6 +94,7 @@
     <div class="container my-5">
         <div class="row mx-auto justify-content-center">
             @isset($faqstop)
+            
             <div class="col-md-6">
 
                 <div class="row p-5">
@@ -103,9 +104,8 @@
                         </div>
                         <div class="ml-auto">
                             <span>
-                                <a href="#" class="align-items-center text-danger ">see all</a>
+                                <a href="faq/category/{{$faqstop->pluck('kategori')[1]}}" class="align-items-center text-danger ">see all</a>
                             </span>
-                            
                         </div>
                     </div>
                     <div id="accordionTop">
@@ -149,7 +149,7 @@
                         </div>
                         <div class="ml-auto">
                             <span>
-                                <a href="#" class="align-items-center text-danger ">see all</a>
+                                <a href="faq/category/{{$faqsen->pluck('kategori')[1]}}" class="align-items-center text-danger ">see all</a>
                             </span>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                         </div>
                         <div class="ml-auto">
                             <span>
-                                <a href="#" class="align-items-center text-danger ">see all</a>
+                                <a href="faq/category/{{$faqsgen->pluck('kategori')[1]}}" class="align-items-center text-danger ">see all</a>
                             </span>
                         </div>
                     </div>
@@ -224,6 +224,7 @@
         </div>
     </div>
 
+    {{-- faq search --}}
     <div class="container">
         @isset($faqs)
         @foreach($faqs as $index => $fs)
@@ -249,7 +250,36 @@
         @endforeach
         @endisset
     </div>
+    {{-- faq search --}}
 
+    {{-- faq see all --}}
+    <div class="container">
+        @isset($faqc)
+        <h1 class="font-weight-bold mb-5">{{$faqc->pluck('kategori')[1]}}</h1>
+        @foreach($faqc as $index => $fc)
+        <div id="accordionSearch">
+            <div class="card my-3">
+                <div class="card-header bg-white border-0 h-25 rounded-lg" id="heading{{$index}}">
+                    <div class="row">
+                        <div class="col-md-10 font-weight-bold">{{$fc->question}}</div>
+                        <div class="col-md-2">
+                            <a class="btn btn-link collapsed text-primary float-right"
+                                data-toggle="collapse" data-target="#collapseSearch{{$index}}"
+                                aria-expanded="false" aria-controls="collapseSearch">
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </a></div>
+                    </div>
+                </div>
+                <div id="collapseSearch{{$index}}" class="collapse" aria-labelledby="heading{{$index}}"
+                    data-parent="#accordionSearch">
+                    <div class="card-body">{!!$fc->answer!!}</div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+        @endisset
+    </div>
+    {{-- faq see all --}}
     <!-- /.section--wrapper -->
 </div>
 <!-- /.container -->

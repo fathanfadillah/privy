@@ -82,6 +82,7 @@ class PrivyController extends Controller
 
     public function faq()
     {
+        $faq = Faq::all();
         // $faqstop = DB::select("select * from faqs where kategori = 'Top Asked Question' ");
         $faqstop = Faq::all()->where('kategori','Top Asked Question');
         // $faqsen = DB::select("select * from faqs where kategori = 'Enterprise' ");
@@ -89,10 +90,10 @@ class PrivyController extends Controller
         // $faqsgen = DB::select("select * from faqs where kategori = 'General' ");
         $faqsgen = Faq::all()->where('kategori','General');
     
-        return view('pages.faq.faq',compact('faqstop','faqsen','faqsgen'));
+        return view('pages.faq.faq',compact('faq','faqstop','faqsen','faqsgen'));
     }
 
-    public function search(Request $request){
+    public function faqSearch(Request $request){
         $search = $request->search;
         $faqs = Faq::where('kategori','like','%'.$search.'%')->orWhere('question','like','%'.$search.'%')
         ->orWhere('answer','like','%'.$search.'%')
@@ -100,6 +101,13 @@ class PrivyController extends Controller
         // dd($faqs);
 
         return view('pages/faq/faq',compact('faqs'));
+    }
+
+    public function faqCategory(Request $request){
+        $category = $request->category;
+        $faqc = Faq::where('kategori','like','%'.$category.'%')->get();
+
+        return view('pages/faq/faq',compact('faqc'));
     }
 
     public function bantuan()
