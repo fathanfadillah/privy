@@ -255,7 +255,9 @@
     {{-- faq see all --}}
     <div class="container">
         @isset($faqc)
-        <h1 class="font-weight-bold mb-5">{{$faqc->pluck('kategori')[1]}}</h1>
+        <h1 class="mb-5">
+            <strong>{{$faqc->pluck('kategori')[1]}}</strong>
+        </h1>
         @foreach($faqc as $index => $fc)
         <div id="accordionSearch">
             <div class="card my-3">

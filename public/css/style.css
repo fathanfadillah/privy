@@ -176,10 +176,10 @@
 }
 
 @media (max-width: 991px) {
-    /* .navd {
-        background-color: #343a40;
-        transition: 500ms ease;
-    } */
+    .nav-blog{
+        text-align: center;
+    }
+    
 }
 
 @media (max-width: 1024px) {

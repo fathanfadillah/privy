@@ -118,9 +118,10 @@ class PrivyController extends Controller
 
     public function blog()
     {
+        $src = config('app.sftp_src'). $this->path;
         // $dokumentasis = DB::select('select * from dokumentasis');
         $blogs = Blog::all();
-        return view('pages.blog',compact('blogs'));
+        return view('pages.blog.index',compact('blogs','src'));
     }
 
 
