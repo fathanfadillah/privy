@@ -35,6 +35,7 @@
                         &nbsp&nbsp<span class="text-secondary"><small>{{Carbon\Carbon::parse($bkv->tanggal_terbit)->isoFormat('MMMM D, Y') }}</small></span>
                     </div>
                     <p class="d-inline-block text-truncate text-secondary w-75" style="">{{$bkv->judul}}.</p>
+                    <p class="d-inline-block text-truncate text-secondary w-75" style="">{!!$bkv->pembukaan!!}</p>
                 </div>
             @endforeach
         </div>
