@@ -45,6 +45,8 @@ Route::get('/job', 'JobController@index')->name('job');
 
 // blog
 Route::get('/blog', 'PrivyController@blog')->name('blog');
+Route::get('/blog/detail/{blog}', 'PrivyController@blogDetail')->name('blog.detail');
+Route::get('/blog/kategori/{kategori}', 'PrivyController@blogKategori')->name('blog.kategori');
 
 // repository
 Route::get('/repository', function () {

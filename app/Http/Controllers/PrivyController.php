@@ -12,6 +12,8 @@ use App\Penghargaan;
 use App\Dokumentasi;
 use App\Faq;
 use App\Blog;
+use App\BlogKategori;
+
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
@@ -105,7 +107,7 @@ class PrivyController extends Controller
 
     public function faqCategory(Request $request){
         $category = $request->category;
-        $faqc = Faq::where('kategori','like','%'.$category.'%')->get();
+        $faqc = Faq::where('kategori',$category)->get();
 
         return view('pages/faq/faq',compact('faqc'));
     }
@@ -121,8 +123,35 @@ class PrivyController extends Controller
         $src = config('app.sftp_src'). $this->path;
         // $dokumentasis = DB::select('select * from dokumentasis');
         $blogs = Blog::all();
-        return view('pages.blog.index',compact('blogs','src'));
+        $blog_kategoris = BlogKategori::all();
+
+        return view('pages.blog.index',compact('blogs','src','blog_kategoris'));
     }
+
+    public function blogKategori(Request $request){
+        $kategori = $request->kategori;
+        $blog_kategori_nav = Blog::where('kategori',$kategori)
+        ->get();
+        $blog_kategoris = BlogKategori::all();
+        $src = config('app.sftp_src'). $this->path;
+        $blog_footer = Blog::all()->take(5);
+
+        return view('pages/blog/index',compact('blog_kategori_nav','src','blog_kategoris','blog_footer'));
+    }
+
+    public function blogDetail($id){
+        $blog_detail = Blog::where('id',$id)->get();
+        $blog_kategoris = BlogKategori::all();
+        $blog_footer = Blog::all()->take(5);
+        $src = config('app.sftp_src'). $this->path;
+        return view('pages/blog/index',compact(
+            'blog_footer',
+            'src',
+            'blog_kategoris',
+            'blog_detail'
+        ));
+    }
+
 
 
 }

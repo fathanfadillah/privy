@@ -3,9 +3,16 @@
         <div class="row py-5">
             <div class="col-md-6 text-white">
                 <h2>POS POS TERBARU </h2>
-                @foreach ($blogs as $item)
-                    
-                @endforeach
+                @isset($blogs)
+                    @foreach ($blogs as $b)
+                        <p><a href="{{route('blog.detail', $b->id)}}" class="text-light text-decoration-none">{{$b->judul}}</a></p>
+                    @endforeach
+                @endisset
+                @isset($blog_footer)
+                    @foreach ($blog_footer as $bf)
+                        <p><a href="{{route('blog.detail', $bf->id)}}" class="text-light text-decoration-none">{{$bf->judul}}</a></p>
+                    @endforeach
+                @endisset
             </div>
             
             <div class="ml-auto col-md-6">
@@ -57,7 +64,6 @@
     </div>
     <div class="col-md-9 container">
         <hr>
-
         <div class="row text-white mx-2">
             &copy; Copyright PT Privy Identitas Digital - All Rights Reserved
         </div>

@@ -8,14 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="mr-2 nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="{{route('blog')}}">Home</a>
         </li>
-        <li class="mx-2 nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="mx-2 nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
+        @foreach ($blog_kategoris as $bk)
+          <li class="mx-2 nav-item">
+            <a class="nav-link text-capitalize" href="{{route('blog.kategori', $bk->kategori)}}">{{$bk->kategori}}</a>
+          </li>    
+        @endforeach
       </ul>
     </div>
-  </nav>
+</nav>
