@@ -12,13 +12,17 @@
                 <div class="col-md-6">
                     <a href="{{route('blog.detail', $b->id)}}"><img src="{{ $src.$b->foto }}" class="img-fluid my-2" alt="Responsive image"></a>
                     <br>
+                    <div class="">
+                        <a href="{{route('blog.detail', $b->id)}}" class="text-dark">
+                            <h2 class="d-inline-block text-truncate w-75" style="">{{$b->judul}}</h2>
+                        </a>
+                    </div>
                     <div class="my-2">
                         <a class="p-1 bg-info text-white text-capitalize text-decoration-none" 
                             href="{{route('blog.kategori', $b->kategori)}}">{{$b->kategori}}</a>
                             &nbsp&nbsp<span class="text-secondary"><small>{{Carbon\Carbon::parse($b->tanggal_terbit)->isoFormat('MMMM D, Y') }}</small></span>
                     </div>
-                    <p class="d-inline-block text-truncate text-secondary w-75" style=""><a class="text-decoration-none text-dark" href="{{route('blog.detail', $b->id)}}">{{$b->judul}}.</a></p>
-                    <p class="d-inline-block text-truncate text-secondary w-75" style="">{!!$b->pembukaan!!}</p>
+                    <span class="d-inline-block text-truncate text-secondary w-75" style="">{!!$b->pembukaan!!}</span>
                 </div>
             @endforeach
         </div>
@@ -30,12 +34,16 @@
                 <div class="col-md-6">
                     <img src="{{ $src.$bkv->foto }}" class="img-fluid my-2" alt="Responsive image">
                     <br>
+                    <div class="">
+                        <a href="{{route('blog.detail', $bkv->id)}}" class="text-dark">
+                            <h2 class="d-inline-block text-truncate w-75" style="">{{$bkv->judul}}</h2>
+                        </a>
+                    </div>
                     <div class="my-2">
                         <a class="p-1 bg-info text-white text-capitalize text-decoration-none" href="{{route('blog.kategori', $bkv->kategori)}}">{{$bkv->kategori}}</a>
                         &nbsp&nbsp<span class="text-secondary"><small>{{Carbon\Carbon::parse($bkv->tanggal_terbit)->isoFormat('MMMM D, Y') }}</small></span>
                     </div>
-                    <p class="d-inline-block text-truncate text-secondary w-75" style="">{{$bkv->judul}}.</p>
-                    <p class="d-inline-block text-truncate text-secondary w-75" style="">{!!$bkv->pembukaan!!}</p>
+                    <span class="d-inline-block text-truncate text-secondary w-75" style="">{!!$bkv->pembukaan!!}</span>
                 </div>
             @endforeach
         </div>
