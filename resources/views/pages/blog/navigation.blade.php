@@ -5,7 +5,7 @@
     <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="ml-5 collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="mr-2 nav-item">
           <a class="nav-link" href="{{route('blog')}}">Home</a>
