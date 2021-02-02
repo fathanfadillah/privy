@@ -90,7 +90,7 @@
 
     /*navbar rubah warna*/
     .navbar-brand {
-        background: url(https://privy.id/v1/img/logo-privyid-white.png);
+        background: url("../images/logo/logo-privyid-white.png");
         height: auto;
         width: 50px;
     }
