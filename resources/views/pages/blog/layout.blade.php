@@ -16,7 +16,9 @@
 
     {{-- Logo --}}
     <link rel="icon" href="{{asset('/images/privy_icon.png')}}"/>
-    
+
+    {{-- additional css --}}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @yield('style')
 </head>
 <body>

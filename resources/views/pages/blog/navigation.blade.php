@@ -1,5 +1,5 @@
-<div class="ml-5 my-5">
-    <img src="{{url('../images/logo/privyid-logo-colored.png')}}" alt="" class="h-25 w-25">
+<div class="ml-5 pl-5 my-2">
+    <img src="{{url('/images/logo/privyid-logo-colored.png')}}" class="img-fluid" alt="Responsive image" >
 </div>
 <nav class="pl-5 navbar navbar-expand-lg navbar-light border">
     <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
