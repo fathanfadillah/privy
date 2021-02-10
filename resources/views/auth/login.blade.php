@@ -192,6 +192,11 @@
                     <img class="icon" src="{{asset('/images/privy.svg')}}" alt="" height="95" width="95">
                 <h3 class="title font-weight-bold">Log In</h3>
                 <h4 class="subtitle">with your PrivyID Account</h4>
+                    @if (session('error'))
+                        <div class="alert alert-danger">
+                            <small>{{ session('error') }}</small>
+                        </div>
+                    @endif
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="">

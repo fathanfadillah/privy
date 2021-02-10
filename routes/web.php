@@ -54,5 +54,4 @@ Route::get('/repository', function () {
 });
 
 Auth::routes();
-
 // Route::get('/home', 'HomeController@index')->name('home');

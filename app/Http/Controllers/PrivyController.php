@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\DB;
 
 class PrivyController extends Controller
 {
-    protected $path = '/images/';
+    protected $path = 'images/';
     
     public function index()
     {

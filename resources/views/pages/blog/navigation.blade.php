@@ -1,4 +1,4 @@
-<div class="ml-5 pl-5 my-2">
+<div class="mx-5 px-5 my-2">
     <img src="{{url('/images/logo/privyid-logo-colored.png')}}" class="img-fluid" alt="Responsive image" >
 </div>
 <nav class="pl-5 navbar navbar-expand-lg navbar-light border">
