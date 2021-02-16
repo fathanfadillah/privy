@@ -53,5 +53,6 @@ Route::get('/repository', function () {
     return view('pages.repository');
 });
 
+Auth::routes(['verify' => true]);
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
